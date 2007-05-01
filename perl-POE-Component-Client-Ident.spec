@@ -1,6 +1,6 @@
 %define module	POE-Component-Client-Ident
 %define name	perl-%{module}
-%define version	1.04
+%define version	1.05
 %define release	%mkrel 1
 
 Name:		%{name}
