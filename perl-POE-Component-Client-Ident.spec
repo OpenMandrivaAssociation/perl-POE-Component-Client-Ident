@@ -16,7 +16,6 @@ BuildRequires:	perl-devel
 %endif
 BuildRequires:  perl(POE)
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 POE::Component::Client::Ident is a POE component that provides non-blocking
