@@ -1,6 +1,6 @@
 %define module	POE-Component-Client-Ident
 %define name	perl-%{module}
-%define version	1.12
+%define version	1.14
 %define release	%mkrel 1
 
 Name:		%{name}
@@ -11,10 +11,8 @@ License:	GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
 Source:		http://www.cpan.org/modules/by-module/POE/%{module}-%{version}.tar.bz2
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
 BuildRequires:  perl(POE)
+BuildRequires:  perl(Test::POE::Server::TCP)
 BuildArch:	noarch
 Buildroot:	%{_tmppath}/%{name}-%{version}
 
