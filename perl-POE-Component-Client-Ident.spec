@@ -1,15 +1,13 @@
 %define upstream_name	 POE-Component-Client-Ident
-%define upstream_version 1.16
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	1.16
+Release:	6
 
 Summary:	A component that provides non-blocking ident lookups to your sessions
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/POE/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/POE/%{upstream_name}-%{version}.tar.bz2
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ Ident lookup services to other components and sessions. The Ident protocol
 is described in RFC 1413
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -45,9 +43,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 * Tue Aug 04 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.160.0-2mdv2010.0
 + Revision: 408773
 - force rebuild
-- rebuild using %%perl_convert_version
-
-* Thu May 21 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.16-1mdv2010.0
+- rebuild using %1.16 Thu May 21 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.16-1mdv2010.0
 + Revision: 378237
 - update to new version 1.16
 
